@@ -28,9 +28,7 @@ const database = {
     ]
 };
 
-app.get('/', (req, res) => {
-    res.send(database.users);
-});
+app.get('/', (req, res) => { res.send('it is working!') });
 
 app.post('/signin', (req, res) => {
     const user = database.users.find(user => {
