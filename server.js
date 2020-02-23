@@ -36,7 +36,7 @@ app.post('/signin', (req, res) => {
     const user = database.users.find(user => {
         return user.email === req.body.email && user.password === req.body.password;
     });
-    user ? res.json('success') : res.status(400).json('error logging in');
+    user ? res.json(user) : res.status(400).json('error logging in');
 });
 
 app.post('/register', (req, res) => {
