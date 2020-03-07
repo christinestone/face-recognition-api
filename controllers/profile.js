@@ -10,7 +10,7 @@ const handleProfileGet = (db) => (req, res) => {
 
 const handleProfileUpdate = (req, res, db) => {
     const { id } = req.params;
-    const { name, age, pet } = req.body.formInput;
+    const { name } = req.body.formInput;
     db('users')
         .where({id})
         .update({name})
